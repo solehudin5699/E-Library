@@ -23,7 +23,10 @@ const Login = (props) => {
         <div className={style.linecheckbox}>
           <div ><input type="checkbox"/>Remember me</div>
           <div><p>Forgot Password</p></div>
-          
+        </div>
+        <div className={style.linebutton}>
+          <button className={style.buttonlogin} type='submit'>Sign up</button>
+          <button className={style.buttonsignup} type='submit'>Sign up</button>
         </div>
       </form>
     </div>

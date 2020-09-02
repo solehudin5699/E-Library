@@ -1,13 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import Sign from "./pages/Sign";
+import Signup from "./pages/Signup";
 // import Login from "./components/Login";
 import * as serviceWorker from "./serviceWorker";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Sign />
+    <Signup />
   </React.StrictMode>,
   document.getElementById("root")
 );
