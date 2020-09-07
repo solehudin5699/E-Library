@@ -1,0 +1,174 @@
+.con-profilea {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.row-head {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  background-image: url("../assets/images/headprofile.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.col-user {
+  flex-basis: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(52, 118, 241, 0.1);
+  text-align: center;
+}
+.col-user h5 {
+  font-size: 25px;
+  color: white;
+  margin: 0;
+  font-style: italic;
+}
+.col-user img {
+  margin-bottom: 10px;
+  margin-top: 10px;
+  width: 30%;
+  border-radius: 30px;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+}
+.col-about {
+  flex-basis: 70%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  background-color: rgb(52, 118, 241, 0.1);
+}
+.contactme {
+  flex-basis: 100%;
+  width: 100%;
+  padding: 0 0 10px 0;
+  display: "flex";
+  align-items: "center";
+}
+.contactme p {
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  margin: 0;
+  font-style: italic;
+}
+.row-history {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.headhistoryuser {
+  width: 100%;
+  background-color: rgb(52, 118, 241, 0.5);
+  padding: 3px 3px 3px 30px;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 0;
+}
+.headhistoryuser h4 {
+  font-size: 20px;
+  margin: 0;
+  color: white;
+}
+.col-book {
+  flex-basis: 33%;
+  padding: 2%;
+}
+.book-item {
+  margin: 0;
+  padding: 2px;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+.cover {
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+  border-radius: 10px 10px 0 0;
+}
+.cover img {
+  width: 100%;
+}
+.detail {
+  width: 100%;
+  text-align: left;
+  padding: 3px;
+  display: flex;
+  flex-direction: column;
+}
+.detail p {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: small;
+}
+.detail .title,
+.detail .date,
+.detail .duration {
+  width: 100%;
+  display: flex;
+}
+.key {
+  flex-basis: 50%;
+  font-weight: bold;
+}
+.value {
+  flex-basis: 50%;
+}
+.value::before {
+  content: ": ";
+  font-weight: bold;
+}
+.button {
+  width: 100%;
+  text-align: right;
+  margin-top: 10px;
+}
+.button button {
+  /* width: 100px; */
+  border-radius: 10px;
+  padding: 10px;
+  background-color: rgb(52, 118, 241);
+}
+
+.backtohome {
+  position: fixed;
+  left: 15px;
+  bottom: 15px;
+  width: 100px;
+  z-index: 10;
+  cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+  .row-head {
+    flex-direction: column;
+  }
+  .col-user {
+    flex-basis: 100%;
+  }
+  .col-user h5 {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  .col-user img {
+    width: 10%;
+    border-radius: 20px;
+  }
+  .col-about {
+    flex-basis: 100%;
+    align-items: flex-start;
+  }
+  .col-book {
+    flex-basis: 50%;
+  }
+}

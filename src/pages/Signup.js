@@ -9,23 +9,25 @@ const Signup = (props) => {
   return (
     <div className={style.container}>
       <div className={style.content}>
+
         <div className={style.bcgimage}>
           <div className={style.title}>
             <h1>Book is a window to the world</h1>
           </div>
           <div className={style.logregcontentres}>
-            <Regist/>
+            <Regist colorLoading="white"/>
           </div>
         </div>
+
         <div className={style.logreg}>
-          <img src={logoLib} alt='' />
+          <div className={style.logreghead}>
+            <img src={logoLib} alt='' />
+          </div>
           <div className={style.logregcontent}>
-            <Regist/>
+            <Regist colorLoading="green"/>
           </div>
         </div>
-        <div className={style.foot}>
-          <p style={{color: "#D0CCCC"}}>By signing up, you agree to Book’s <span style={{color:"black"}}>Terms and Conditions & Privacy Policy</span></p>
-        </div>
+        
       </div>
     </div>
   );

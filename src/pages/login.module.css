@@ -1,21 +1,28 @@
 .container {
-  position: fixed;
   width: 100%;
   height: 100%;
+  /* top: 0;
+  bottom: 0;
+  position: fixed; */
 }
 .content {
   display: flex;
   padding: 0;
   margin: 0;
+  width: 100%;
+  height: 100%;
 }
-.bcgimage {
+.bcgimage,
+.bcgimagelogin {
   flex-basis: 65%;
-  height: 100vh;
   display: flex;
-  background: rgba(0, 0, 0, 0.3);
   background-image: url("../assets/images/bgp-logreg.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100%;
+  /* height: 100vh; */
+}
+.bcgimagelogin {
+  height: 100vh;
 }
 .title {
   width: 80%;
@@ -27,21 +34,35 @@
   padding: 20px;
 }
 .logreg {
+  display: flex;
   flex-basis: 35%;
   background-color: white;
-  height: 100vh;
-  position: relative;
+  height: 100%;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  /* position: relative; */
+  /* padding-bottom: 15%; */
+  /* margin-bottom: 100px; */
+}
+.logreghead {
+  flex-basis: 100%;
+  display: flex;
+  justify-content: flex-end;
 }
 .logreg img {
-  position: absolute;
-  top: 10px;
-  right: 10px;
+  margin-right: 3%;
+  margin-top: 3%;
   width: 15%;
 }
 .logregcontent {
+  flex-basis: 100%;
   width: 80%;
-  position: absolute;
-  top: 100px;
+  /* position: absolute; */
+  /* top: 100px; */
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
   margin: 0 10%;
 }
 .logregcontentres {
@@ -49,7 +70,8 @@
   display: none;
   align-self: center;
   justify-self: center;
-  margin: 0 auto;
+  margin: 10% auto;
+  padding: 10%;
 }
 .logincontainer,
 .regcontainer {
@@ -60,12 +82,13 @@
   /* align-items: center; */
   padding: 0;
   margin: 0;
+  height: 100%;
 }
 .loghead,
 .reghead {
   width: 70%;
   flex-basis: 70%;
-  margin-bottom: 30px;
+  /* margin-bottom: 20px; */
 }
 .loghead h1,
 .reghead h1 {
@@ -91,6 +114,7 @@
   padding: 5px;
   border-radius: 5px;
   background: #ffffff;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
 }
 .linecheckbox {
   width: 100%;
@@ -114,14 +138,14 @@
   padding: 5px;
   border-radius: 5px;
   background: #ffffff;
-  box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
 }
 
 .line p,
 .linepassword p {
   margin: 0;
   color: #d0cccc;
-  font-size: 17px;
+  font-size: 15px;
 }
 .email,
 .pass,
@@ -130,17 +154,31 @@
   width: 100%;
   margin: 0;
   border: none;
-  padding: 0;
-  height: 26px;
-  font-size: 20px;
+  padding-left: 10px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  height: 30px;
+  font-size: 17px;
+  border-radius: 15px;
 }
-.input:focus {
-  /* font-size: 50px; */
+.email::placeholder,
+.pass::placeholder,
+.username::placeholder,
+.fullname::placeholder {
+  font-size: 13px;
+  color: #d0cccc;
+}
+/* input {
+  border-radius: 5px;
+  border: none;
+} */
+/* .input:focus {
+  font-size: 50px;
   background-color: rgb(250, 244, 244);
 }
-.input::placeholder {
-  font-size: 50px;
-}
+input::placeholder {
+  font-size: 20px;
+} */
 
 .linebutton {
   width: 100%;
@@ -170,21 +208,28 @@
   margin: 15px;
   color: #d0cccc;
 }
-.foot {
-  position: absolute;
-  bottom: 10px;
-  right: 100px;
-  width: 20%;
+.linkSignUp {
+  color: #d0cccc;
+  text-decoration: none;
 }
+.foot {
+  /* margin-top: 30px; */
+  display: flex;
+  justify-content: flex-start;
+}
+
 @media screen and (max-width: 768px) {
-  .content {
+  .content,
+  .contentlogin {
     display: flex;
     padding: 0;
     margin: 0;
   }
-  .bcgimage {
+  .bcgimage,
+  .bcgimagelogin {
     flex-basis: 100%;
     background-color: #fff;
+    background-size: cover;
     height: 100vh;
   }
   .title {
@@ -196,7 +241,8 @@
     justify-self: center;
     background-color: #eedfdf59;
     border-radius: 5px;
-    padding: 10%;
+    padding-top: 25%;
+    margin-top: 10%;
   }
   .logreg {
     display: none;
@@ -211,10 +257,10 @@
   .linecheckbox p {
     color: #ffffff;
   }
-  .foot {
+  /* .foot {
     position: absolute;
     bottom: 10px;
     left: 30px;
     width: 50%;
-  }
+  } */
 }
