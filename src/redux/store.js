@@ -9,7 +9,7 @@ import indexReducer from "./reducers/";
 const persistConfig ={
   key: "root",
   storage:sessionStorage,
-  // blacklist:["historyAPI"]
+  blacklist:["animate"]
   // whitelist: ["book"]
 }
 const persistedReducer = persistReducer(persistConfig, indexReducer )

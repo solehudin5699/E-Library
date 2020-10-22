@@ -38,7 +38,7 @@ const HistoryAdmin = (props) => {
                 <tr key={index}>
                   <th scope='row'>{index+1}</th>
                   <td>{item.title}</td>
-                  <td>{item.borrow_date}</td>
+                  <td>{item.borrow_date.toString().slice(0,10)}</td>
                   <td>{item.fullname}</td>
             </tr>
               )

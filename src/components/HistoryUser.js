@@ -63,7 +63,7 @@ const HistoryUser = (props) => {
                       </div>
                       <div className='date'>
                         <p className='key'>Date of Borrow</p>
-                        <p className='value'>{item.borrow_date}</p>
+                        <p className='value'>{item.borrow_date.toString().slice(0,10)}</p>
                       </div>
                       <div className='duration'>
                         <p className='key'>Duration</p>

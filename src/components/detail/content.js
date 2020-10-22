@@ -48,21 +48,21 @@ class Content extends React.Component {
                     console.log(err);
                 });
         }
-        let monthName = ["January", "February", "March","Apri;", "May","June", "July", "August", "September", "October", "November", "December"];
+    
         const ex= new Date();
-        const date = ex.getDate()
-        const month = monthName[ex.getMonth()];
+        const date = ex.getDate();
+        const month = ex.getMonth();
         const year = ex.getFullYear();
         const full = `${date}-${month}-${year}`
         let bodyHistory={
             books_id:id,
-            borrow_date: full,
+            borrow_date: Number(full),
             duration:7,
             users_id:Number(this.props.authAPI.dataLogin.id)
         }
         let bodyBorrow={
             books_id:id,
-            borrow_date: full,
+            borrow_date: Number(full),
             duration:7,
             user_id:Number(this.props.authAPI.dataLogin.id)
         }

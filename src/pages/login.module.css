@@ -32,6 +32,7 @@
   font-size: 25px;
   color: #f9f9f9;
   padding: 20px;
+  margin-top: 50px;
 }
 .logreg {
   display: flex;
@@ -167,6 +168,8 @@
 .fullname::placeholder {
   font-size: 13px;
   color: #d0cccc;
+  outline: none;
+  border: none;
 }
 /* input {
   border-radius: 5px;
