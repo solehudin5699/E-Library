@@ -22,7 +22,7 @@ const HistoryUser = (props) => {
       id,
       books_qty:Number(bookDetail.qty + 1),
     }
-    const url = 'http://localhost:2300/books';
+    const url = process.env.REACT_APP_API_URL+'/books';
       axios.patch(url, body)
       .then((res) => {
         console.log(res);
@@ -54,7 +54,7 @@ const HistoryUser = (props) => {
                 <div key={index} className='col-book'>
                   <div className='book-item'>
                     <div className='cover'>
-                      <img src={item.image} alt='' />
+                      <img src={process.env.REACT_APP_API_URL+item.image} alt='' />
                     </div>
                     <div className='detail'>
                       <div className='title'>

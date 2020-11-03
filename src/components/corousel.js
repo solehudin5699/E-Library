@@ -35,7 +35,7 @@ const Corousel = (props) => {
                                 : props.book.data.map((item) => {
                                     return (
                                         <div className="carousel-item" key={item.id}>
-                                            <img src={item.image} className="d-block w-100" alt="..." />
+                                            <img src={process.env.REACT_APP_API_URL+item.image} className="d-block w-100" alt="..." />
                                             <div className="carousel-caption">
                                                 <h5>{item.title}</h5>
                                                 <p>{item.author}</p>

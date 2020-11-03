@@ -6,10 +6,10 @@ const Header = (props) => {
     return (
         <>
             <div className="header-detail">
-                <img src={props.book.bookDetail.image}alt="avenger"></img>
+                <img src={process.env.REACT_APP_API_URL+props.book.bookDetail.image}alt="avenger"></img>
             </div>
             <div className="picture shadow">
-            <img src={props.book.bookDetail.image}alt="header"></img>
+            <img src={process.env.REACT_APP_API_URL+props.book.bookDetail.image}alt="header"></img>
             </div>
         </>
     );

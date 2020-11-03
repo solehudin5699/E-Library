@@ -1,13 +1,13 @@
 import axios from "axios";
 
 export const getBorrowBookAPI = () => {
-  return axios.get("http://localhost:2300/borrow_books");
+  return axios.get(process.env.REACT_APP_API_URL + "/borrow_books");
 };
 
 export const postBorrowBookAPI = (body) => {
-  return axios.post("http://localhost:2300/borrow_books", body);
+  return axios.post(process.env.REACT_APP_API_URL + "/borrow_books", body);
 };
 
 export const deleteBorrowBookAPI = (id) => {
-  return axios.delete(`http://localhost:2300/borrow_books?id=${id}`);
+  return axios.delete(process.env.REACT_APP_API_URL + `/borrow_books?id=${id}`);
 };

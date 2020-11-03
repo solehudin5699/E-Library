@@ -31,7 +31,7 @@ class ListBook extends React.Component {
                                     <div className="col-12 col-sm-6 col-md-4 item" key={item.id}>
                                         <div className="card shadow">
                                             <Link to="/detail" className="link-to bg-info">
-                                                <img src={item.image} className="card-img-top" alt="..." onClick={() => this.props.addDetailCreator(
+                                                <img src={process.env.REACT_APP_API_URL+item.image} className="card-img-top" alt="..." onClick={() => this.props.addDetailCreator(
                                                     item.id,
                                                     item.title,
                                                     item.genre,
