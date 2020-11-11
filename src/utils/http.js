@@ -11,7 +11,7 @@ export const delBook = (id) =>{
 
 export const pageBook = (params) =>{
     const url = process.env.REACT_APP_API_URL
-    return Axios.get(`${url}/${params}`)
+    return Axios.get(`${url}${params}`)
 }
 
 export const searchBook = (title) =>{
