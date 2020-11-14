@@ -1,24 +1,42 @@
-import React from 'react';
+import React, { useEffect, useState } from "react";
 import "../../assets/css/detail-page.css";
-import { connect } from "react-redux";
+import { useSelector } from "react-redux";
 
 const Header = (props) => {
-    return (
-        <>
-            <div className="header-detail">
-                <img src={process.env.REACT_APP_API_URL+props.book.bookDetail.image}alt="avenger"></img>
-            </div>
-            <div className="picture shadow">
-            <img src={process.env.REACT_APP_API_URL+props.book.bookDetail.image}alt="header"></img>
-            </div>
-        </>
-    );
-};
-const mapStateToProps = (state) =>{
-    const {book} = state;
-    return{
-        book
-    }
-}
+  const { book } = useSelector((state) => state);
+  const [imageEdit, setImageEdit] = useState(null);
 
-export default connect(mapStateToProps,null)(Header);
+  const index = book.data.filter((item) => {
+    return item.id === book.bookDetail.id;
+  });
+  useEffect(() => {
+    setImageEdit(book.bookDetail.image);
+  }, [book.bookDetail.image]);
+
+  console.log(imageEdit);
+
+  return (
+    <>
+      <div className='header-detail'>
+        {imageEdit === null ? (
+          <img src={index[0].image} alt='avenger'></img>
+        ) : imageEdit.split(":")[0] === "http" ? (
+          <img src={index[0].image} alt='avenger'></img>
+        ) : (
+          <img src={imageEdit} alt='avenger'></img>
+        )}
+      </div>
+      <div className='picture shadow'>
+        {imageEdit === null ? (
+          <img src={index[0].image} alt='avenger'></img>
+        ) : imageEdit.split(":")[0] === "http" ? (
+          <img src={index[0].image} alt='avenger'></img>
+        ) : (
+          <img src={imageEdit} alt='avenger'></img>
+        )}
+      </div>
+    </>
+  );
+};
+
+export default Header;

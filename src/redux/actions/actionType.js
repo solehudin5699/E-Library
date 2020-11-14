@@ -5,9 +5,11 @@ export const clickNavAction = "CLICK_NAV";
 
 // book
 export const getBookAction = "GET_BOOK";
+export const getMoreBookAction = 'GET_MORE_BOOK';
 export const delBookAction ="DEL_BOOK";
 export const pageAction = "PAGE_BOOK";
 export const searchAction = "SEARCH_BOOK";
+export const clearDetailBookAction = 'CLEAR_DETAIL_BOOK'
 // belu digunakan
 export const searchGenreAction = "SEARCH_GENRE";
 export const searchYearAction = "SEARCH_YEAR";

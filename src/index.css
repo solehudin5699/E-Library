@@ -5,9 +5,6 @@ body {
   padding: 0;
 }
 
-* {
-  box-sizing: border-box;
-}
 /* font */
 @font-face {
   font-weight: lighter;
@@ -23,7 +20,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   position: relative;
   overflow-x: hidden;
-  /* overflow: hidden; */
   overflow-y: scroll;
 }
 
@@ -298,6 +294,15 @@ main .topslider {
 }
 
 /* Carousel */
+.slider{
+  margin-top: 2vh;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: -5vh;
+
+}
 .corousel {
   margin-top: 80px;
   padding: 20px 0;
@@ -381,7 +386,7 @@ main .topslider {
 /* List book */
 .listbook {
   margin-left: 4vw;
-  margin-top: 70px;
+  /* margin-top: 2vh; */
   padding: 50px;
   margin-bottom: 20px;
 }
@@ -395,7 +400,7 @@ main .topslider {
 .listbook .row .card {
   overflow: hidden;
   border-radius: 15px;
-  width: 70%;
+  width: 85%;
   height: 100%;
 }
 .listbook .row .card .card-body {
@@ -420,12 +425,12 @@ main .topslider {
 }
 .listbook .row .card img {
   width: 100%;
-  height: 100%;
+  height: 60%;
   object-fit: cover;
 }
 .listbook .title {
   margin-top: 100px;
-  padding-left: 6vw;
+  padding-left: 2vw;
   padding-bottom: 15px;
 }
 .listbook .title h3 {
@@ -439,19 +444,19 @@ main .topslider {
 .pagination .col-12 {
   display: flex;
   justify-content: center;
-  padding: 0 5.5vw;
+  padding: 0 2vw;
 }
 .pagination .page-item button {
   align-items: center;
   justify-content: center;
   display: flex;
-  background-color: rgb(37, 139, 223);
+  background-color: rgb(194, 203, 211);
   width: 8vw;
-  height: 7vh;
+  height: 5vh;
   margin: 8px;
 }
 .pagination .page-item button:hover {
-  background-color: rgb(52, 153, 236);
+  background-color: rgb(132, 135, 138);
 }
 .pagination .page-item button:focus {
   outline: none;
@@ -523,8 +528,22 @@ main .topslider {
   .corousel .carousel-inner img {
     height: 300px;
   }
+  .listbook .row .card {
+   width: 100%;
+   height: 80%;
+   font-size: small;
+  }
   .listbook .title {
     padding-left: 0;
     text-align: center;
+  }
+  .right-bar {
+   width: 60vw;
+  }
+  .listbook .row .card .card-body .bt{
+    font-size: smaller;
+  }
+  .listbook .row .card .card-body .synop{
+    font-size: smaller;
   }
 }
