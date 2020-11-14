@@ -1,7 +1,13 @@
 import Axios from 'axios';
 
 export const getBook = () => {
-    return Axios.get(process.env.REACT_APP_API_URL+'/books?page=1&limit=6');
+    return Axios.get(process.env.REACT_APP_API_URL+'/books?page=1&limit=16');
+}
+
+export const getMoreBook = (page) => {
+    const url = `${process.env.REACT_APP_API_URL}/books?page=${page}&limit=16`
+    return Axios.get(url);
+
 }
 
 export const delBook = (id) =>{

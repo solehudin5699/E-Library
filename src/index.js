@@ -3,6 +3,8 @@ import ReactDOM from "react-dom";
 import "bootstrap/dist/css/bootstrap.css";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import "./index.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 // import Profile from "./pages/Profile";
 // import Login from "./components/Login";
 import App from './App';

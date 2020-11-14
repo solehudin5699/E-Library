@@ -1,14 +1,19 @@
 import React from 'react';
 import cheked from '../../assets/images/checked.png';
-import {connect} from 'react-redux';
+import {connect, useDispatch} from 'react-redux';
+import {getBookCreator} from '../../redux/actions/book'
 
 const ModalDel = (props) => {
+    const dispatch = useDispatch();
     return (
         <div className="modal fade delete" tabIndex="-1" id="modal-delete">
             <div className="modal-dialog modal-dialog-centered">
                 <div className="modal-content">
                     <div className="modal-header">
-                        <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+                    <button onClick={() => 
+                        {
+                         props.history.push('/')
+                        dispatch(getBookCreator())}} type="button" className="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>

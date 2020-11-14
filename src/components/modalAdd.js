@@ -9,7 +9,7 @@ class ModalAdd extends React.Component {
     author: '',
     synopsis: '',
     release_year: null,
-    genre_id: 1,
+    genre_id: 2,
     books_qty: null,
     image: null,
 
@@ -30,9 +30,10 @@ class ModalAdd extends React.Component {
       }
     };
 
-    const url = process.env.REACT_APP_BOOK;
+    const url = `${process.env.REACT_APP_API_URL}/books`;
     Axios.post(url, formData, config)
       .then((res) => {
+        console.log(res, 'berhasillll cuyyyy')
         this.props.getBookCreator()
       }).catch((err) => {
         console.log(err);

@@ -1,4 +1,4 @@
-import {getBook, delBook, pageBook, searchBook, searchByGenre, searchByYear} from '../../utils/http';
+import {getBook, delBook, pageBook, searchBook, searchByGenre, searchByYear, getMoreBook} from '../../utils/http';
 import {
     getBookAction,
     addDetailAction,
@@ -8,6 +8,8 @@ import {
     searchAction,
     searchGenreAction,
     searchYearAction,
+    getMoreBookAction,
+    clearDetailBookAction,
 } from './actionType';
 
 export const getBookCreator = () => {
@@ -16,6 +18,12 @@ export const getBookCreator = () => {
         payload: getBook()
     };
 };
+export const getMoreBookCreator = (page) => {
+    return {
+        type: getMoreBookAction,
+        payload: getMoreBook(page)
+    }
+}
 
 export const addDetailCreator = (id, title, genre, image, year, synopsis, author, qty, genre_id) => {
     return {
@@ -34,10 +42,11 @@ export const addDetailCreator = (id, title, genre, image, year, synopsis, author
     };
 };
 
-export const editDetailCreator = (title, genre, image, year, synopsis, author, qty) => {
+export const editDetailCreator = (id,title, genre, image, year, synopsis, author, qty, genre_id) => {
     return {
         type: editDetailAction,
         payload: {
+            id: id,
             title: title,
             genre: genre,
             image: image,
@@ -45,6 +54,7 @@ export const editDetailCreator = (title, genre, image, year, synopsis, author, q
             synopsis: synopsis,
             author: author,
             qty: qty,
+            genre_id: genre_id
 
         }
     };
@@ -65,6 +75,11 @@ export const searchBookCreator = (title) => {
         payload: searchBook(title)
     };
 };
+export const clearDetailCreator = () => {
+    return {
+        type: clearDetailBookAction,
+    }
+}
 
 // belum dipake
 export const searchGenreCreator = (id) =>{
