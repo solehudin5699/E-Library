@@ -66,7 +66,7 @@ const Regist = (props) => {
             <h1>Register</h1>
             {statusRegist === 500 ? (
               <p style={{ color: "red" }}>
-                Something is wrong, please register again!
+                Failed, probably username is already registered or connection error
               </p>
             ) : (
               <p>Welcome Back, Please Register to create account</p>

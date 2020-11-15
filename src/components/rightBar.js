@@ -20,7 +20,7 @@ const RightBar = (props) => {
                 <img src={menu} alt="menu" onClick={props.clickLeftBarCreator}></img>
             </div>
             <div className="pic">
-                <img src={process.env.REACT_APP_API_URL+dataLogin.avatar} alt="person"></img>
+                <img src={dataLogin.avatar} alt="person"></img>
                 <p className="mt-2">{dataLogin.fullname}</p>
             </div>
             <div className="navs">
